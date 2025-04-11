@@ -22,12 +22,12 @@ export default function Home() {
           </div>
         </section>
         <section className="flex flex-col justify-evenly text-black w-[368px] px-[40px]">
-          <p>Summary</p>
+          <p className="heading-m text-(--dark-navy)">Summary</p>
           <ul className="grid gap-[16px]">
             {data.map((d) => (
               <li
                 key={d.category}
-                className="border w-[288px] h-[56px] rounded-xl"
+                className="w-[288px] h-[56px] rounded-xl flex items-center nth-1:bg-red-50 nth-1:text-(--light-red) nth-2:bg-yellow-50 nth-2:text-(--orangey-yellow) nth-3:bg-green-50 nth-3:text-(--green-teal) nth-4:bg-blue-50 nth-4:text-(--cobalt-blue)"
               >
                 <Image
                   src={`${d.icon}`}
@@ -36,11 +36,18 @@ export default function Home() {
                   alt=""
                   className="inline"
                 />
-                {d.category} {d.score}/100
+                <p>
+                  <span>{d.category}</span>
+                  <span className="text-(--dark-navy)">
+                    {d.score}/100
+                  </span>
+                </p>
               </li>
             ))}
           </ul>
-          <button className="w-[288px] h-[56px]">Continue</button>
+          <button className="w-[288px] h-[56px] bg-(--dark-navy) rounded-[128px] text-white font-bold text-lg">
+            Continue
+          </button>
         </section>
       </main>
 
