@@ -4,7 +4,7 @@ import data from '../data.json';
 export default function Home() {
   return (
     <div className="h-screen  bg-(--very-light-blue) flex flex-col justify-center items-center">
-      <main className=" bg-white flex flex-row rounded-4xl w-[736px] box-border h-[512px]">
+      <main className=" bg-white flex flex-row rounded-4xl w-[736px] box-border h-[512px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
         <section className="bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100% rounded-4xl w-[368px] flex flex-col items-center justify-evenly text-center">
           <p className="heading-m text-(--light-blue)">Your Result</p>
           <span className="w-[200px] h-[200px] flex flex-col justify-center items-center rounded-full bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100% ">
@@ -27,21 +27,26 @@ export default function Home() {
             {data.map((d) => (
               <li
                 key={d.category}
-                className="w-[288px] h-[56px] rounded-xl flex items-center nth-1:bg-red-50 nth-1:text-(--light-red) nth-2:bg-yellow-50 nth-2:text-(--orangey-yellow) nth-3:bg-green-50 nth-3:text-(--green-teal) nth-4:bg-blue-50 nth-4:text-(--cobalt-blue)"
+                className="w-[288px] h-[56px] rounded-xl flex items-center justify-between px-4 nth-1:bg-red-50 nth-1:text-(--light-red) nth-2:bg-yellow-50 nth-2:text-(--orangey-yellow) nth-3:bg-green-50 nth-3:text-(--green-teal) nth-4:bg-blue-50 nth-4:text-(--cobalt-blue) text-lg font-medium"
               >
-                <Image
-                  src={`${d.icon}`}
-                  width={20}
-                  height={20}
-                  alt=""
-                  className="inline"
-                />
-                <p>
-                  <span>{d.category}</span>
-                  <span className="text-(--dark-navy)">
-                    {d.score}/100
+                <span className="flex">
+                  <Image
+                    src={`${d.icon}`}
+                    width={20}
+                    height={20}
+                    alt=""
+                    className="mr-3"
+                  />
+                  {d.category}
+                </span>
+                <span>
+                  <span className="text-(--dark-navy) font-bold">
+                    {d.score}
                   </span>
-                </p>
+                  <span className="text-(--dark-navy) opacity-[.5]">
+                    &nbsp;&nbsp;/ 100
+                  </span>
+                </span>
               </li>
             ))}
           </ul>
