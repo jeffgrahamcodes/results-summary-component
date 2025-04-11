@@ -15,7 +15,7 @@ export default function Home() {
           </span>
           <div className="w-[260px] h-[134px]">
             <p className="mb-[14px] heading-l font-bold">Great</p>
-            <p className="text-lg font-medium text-(--light-blue)">
+            <p className="text-lg font-medium text-(--light-blue) leading-[22px]">
               You scored higher than 65% of the people who have taken
               these tests.
             </p>
@@ -50,7 +50,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <button className="w-[288px] h-[56px] bg-(--dark-navy) rounded-[128px] text-white font-bold text-lg">
+          <button className="w-[288px] h-[56px] bg-(--dark-navy) rounded-[128px] text-white font-bold text-lg cursor-pointer hover:bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100%">
             Continue
           </button>
         </section>
