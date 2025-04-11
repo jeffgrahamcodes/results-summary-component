@@ -6,13 +6,16 @@ export default function Home() {
     <div className="h-screen  bg-(--very-light-blue) flex flex-col justify-center items-center">
       <main className=" bg-white flex flex-row rounded-4xl w-[736px] box-border h-[512px]">
         <section className="bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100% rounded-4xl w-[368px] flex flex-col items-center justify-evenly text-center">
-          <p>Your Result</p>
-          <p className="w-[200px] h-[200px] flex justify-center items-center rounded-full bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100% ">
-            76 of 100
-          </p>
+          <p className="heading-m text-(--light-blue)">Your Result</p>
+          <span className="w-[200px] h-[200px] flex flex-col justify-center items-center rounded-full bg-gradient-to-b from-[#7755FF] from-0% via-[#6943FF] via-0% to-[#2F2CE9] to-100% ">
+            <p className="heading-xl">76</p>
+            <p className="text-lg font-bold text-(--light-blue) opacity-[.5168]">
+              of 100
+            </p>
+          </span>
           <div className="w-[260px] h-[134px]">
-            <p className="mb-[14px]">Great</p>
-            <p>
+            <p className="mb-[14px] heading-l font-bold">Great</p>
+            <p className="text-lg font-medium text-(--light-blue)">
               You scored higher than 65% of the people who have taken
               these tests.
             </p>
